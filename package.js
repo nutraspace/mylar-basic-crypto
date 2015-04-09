@@ -9,7 +9,8 @@ Package.onUse(function (api) {
     api.versionsFrom('METEOR@1.0');
 
     api.use(['ejson', 'underscore']);
-
+    api.use('underscore', 'client');
+    api.use('ejson', 'client');
     api.addFiles(['sjcl.js', 'crypto.js'], ['client', 'server']);
 
     api.export("sjcl");
